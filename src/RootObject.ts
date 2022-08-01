@@ -1,4 +1,4 @@
-declare class RootObject {
+class RootObject {
     [k: string]: any;
 }
 
