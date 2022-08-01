@@ -1,7 +1,7 @@
 {
-  "name": "@web-atoms/date-time",
-  "version": "1.0.29",
-  "description": "DateTime library for Web Atoms",
+  "name": "@web-atoms/hybrid-clr",
+  "version": "1.0.1",
+  "description": "CLR definitions",
   "main": "index.js",
   "scripts": {
     "test": "node dist/test.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/web-atoms/date-time.git"
+    "url": "git+https://github.com/web-atoms/hybrid-clr.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/web-atoms/date-time/issues"
+    "url": "https://github.com/web-atoms/hybrid-clr/issues"
   },
-  "homepage": "https://github.com/web-atoms/date-time#readme",
+  "homepage": "https://github.com/web-atoms/hybrid-clr#readme",
   "devDependencies": {
     "@web-atoms/unit-test": "^1.0.8"
   }
