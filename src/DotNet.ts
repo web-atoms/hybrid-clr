@@ -31,7 +31,10 @@ function create(name: string, ns: string, nsAssembly: string) {
 export function dotNetInit(a, ns, nsAssembly) {
     for (const key in a) {
         if (key && Object.prototype.hasOwnProperty.call(a, key)) {
-            Object.defineProperty(a, key, create(key, ns, nsAssembly));
+            const e = a[key];
+            if (typeof e === "function") {
+                Object.defineProperty(a, key, create(key, ns, nsAssembly));
+            }
         }
     }
 }
