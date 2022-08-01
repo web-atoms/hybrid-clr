@@ -25,8 +25,12 @@ namespace WebAtoms {
 
             export class HybridMedia extends RootObject {
 
-                static EncodeMP4Async(inputFile: string, preset: Preset, progress: (n) => void): Promise<string> {
-                    throw new Error("not implemented");
+                static chooseVideoAsync(preset: Preset, progress: (n) => void): Promise<string> {
+                    return null;
+                }
+
+                static encodeMP4Async(inputFile: string, preset: Preset, progress: (n) => void): Promise<string> {
+                    return null;
                 }
             }
         }
