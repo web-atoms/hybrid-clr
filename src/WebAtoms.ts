@@ -38,8 +38,5 @@ export namespace WebAtoms {
 
 }
 
-const wh = (WebAtoms as any).Hybrid ??= {};
-dotNetInit(wh, "WebAtoms.Hybrid", "WebAtoms.Hybrid");
-
-wh.Media ??= {};
-dotNetInit(wh.Media, "WebAtoms.Hybrid.Media", "WebAtoms.Hybrid.Media");
+dotNetInit((WebAtoms as any).Hybrid ??= {}, "WebAtoms.Hybrid", "WebAtoms.Hybrid");
+dotNetInit((WebAtoms as any).Hybrid.Media ??= {}, "WebAtoms.Hybrid.Media", "WebAtoms.Hybrid.Media");
