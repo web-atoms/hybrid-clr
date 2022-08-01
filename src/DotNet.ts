@@ -15,14 +15,14 @@ function create(name: string, ns: string, nsAssembly: string) {
         configurable: true,
         enumerable: true,
         get() {
-            const t = DotNet.getClass(`${ns}.${name}, ${nsAssembly}`);
+            const value = DotNet.getClass(`${ns}.${name}, ${nsAssembly}`);
             Object.defineProperty(this, name, {
                 enumerable: true,
                 configurable: true,
                 writable: true,
-                value: t
+                value
             });
-            return t;
+            return value;
         }
     };
 }
@@ -31,7 +31,7 @@ function create(name: string, ns: string, nsAssembly: string) {
 export function dotNetInit(a, ns, nsAssembly) {
     for (const key in a) {
         if (Object.prototype.hasOwnProperty.call(a, key)) {
-            a[key] = create(key, ns, nsAssembly)
+            Object.defineProperty(a, key, create(key, ns, nsAssembly));
         }
     }
 }
