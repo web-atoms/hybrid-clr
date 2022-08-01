@@ -1,7 +1,7 @@
 import DotNet, { dotNetInit } from "./DotNet";
 import RootObject from "./RootObject";
 
-namespace WebAtoms {
+export namespace WebAtoms {
 
     export namespace Hybrid {
         export class HybridApplication extends RootObject {
