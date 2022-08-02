@@ -8,7 +8,10 @@ export interface IDotNet {
 
 declare var dotNet: IDotNet;
 
-const DotNet = dotNet;
+const DotNet = dotNet ?? {
+    getClass(name) {
+    }
+};
 
 function create(name: string, ns: string, nsAssembly: string) {
     return {
