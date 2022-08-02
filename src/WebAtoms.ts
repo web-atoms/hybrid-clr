@@ -25,11 +25,13 @@ export namespace WebAtoms {
 
             export class HybridMedia extends RootObject {
 
-                static chooseVideoAsync(preset: Preset, progress: (n) => void): Promise<File> {
+                static instance: HybridMedia;
+
+                public chooseVideoAsync(preset: Preset, progress: (n) => void): Promise<File> {
                     return null;
                 }
 
-                static encodeMP4Async(inputFile: string, preset: Preset, progress: (n) => void): Promise<string> {
+                public encodeMP4Async(inputFile: string, preset: Preset, progress: (n) => void): Promise<string> {
                     return null;
                 }
             }
