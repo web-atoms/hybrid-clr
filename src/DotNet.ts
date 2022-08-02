@@ -6,9 +6,7 @@ export interface IDotNet {
     getClass<T>(name: string): IClassOf<T>;
 }
 
-declare var dotNet: IDotNet;
-
-const DotNet = dotNet ?? {
+const DotNet = (window as any).dotNet ?? {
     getClass(name) {
     }
 };
