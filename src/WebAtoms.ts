@@ -25,7 +25,7 @@ export namespace WebAtoms {
 
             export class HybridMedia extends RootObject {
 
-                static chooseVideoAsync(preset: Preset, progress: (n) => void): Promise<string> {
+                static chooseVideoAsync(preset: Preset, progress: (n) => void): Promise<File> {
                     return null;
                 }
 
