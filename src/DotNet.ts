@@ -11,6 +11,7 @@ const DotNet: {
     getClass(name: string): any;
 } = (window as any).dotNet ?? {
     getClass(name) {
+        throw new Error("dotNet is not available, the code is not running inside a WebAtoms.HybridWebView")
     }
 };
 
