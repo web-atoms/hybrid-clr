@@ -5,6 +5,7 @@ export namespace WebAtoms {
 
     export namespace Hybrid {
         export class HybridApplication extends RootObject {
+            static current: HybridApplication;
             static deviceToken: string;
             static badge: number;
             static appUrl: string;
