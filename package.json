@@ -1,6 +1,6 @@
 {
   "name": "@web-atoms/hybrid-clr",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "CLR definitions",
   "main": "index.js",
   "scripts": {
