@@ -7,6 +7,8 @@ export namespace WebAtoms {
         export class HybridApplication extends RootObject {
             static deviceToken: string;
             static badge: number;
+            static appUrl: string;
+            static urlRequested: string;
         }
 
         export namespace Media {

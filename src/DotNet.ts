@@ -6,10 +6,15 @@ export interface IDotNet {
     getClass<T>(name: string): IClassOf<T>;
 }
 
-const DotNet = (window as any).dotNet ?? {
+const DotNet: {
+    isAvailable: boolean;
+    getClass(name: string): any;
+} = (window as any).dotNet ?? {
     getClass(name) {
     }
 };
+
+DotNet.isAvailable = !!(window as any).dotNet;
 
 function create(name: string, ns: string, nsAssembly: string) {
     return {
