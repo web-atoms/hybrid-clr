@@ -10,6 +10,7 @@ export namespace WebAtoms {
             static badge: number;
             static appUrl: string;
             static urlRequested: string;
+            static shareRequested: string;
         }
 
         export namespace Media {
