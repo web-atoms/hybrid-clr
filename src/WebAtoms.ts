@@ -11,6 +11,13 @@ export namespace WebAtoms {
             static appUrl: string;
             static urlRequested: string;
             static shareRequested: string;
+
+            static refreshApp: () => void;
+            static invokeBackButton: () => void;
+        }
+
+        export class FilePickerService extends RootObject {
+            static pickFileAsync: (title: string, accept?: string) => Promise<File>;
         }
 
         export namespace Media {
