@@ -47,9 +47,25 @@ export namespace WebAtoms {
                 }
             }
         }
+
+        export namespace Api {
+
+            export class GeoLocation extends RootObject {
+
+
+                public static getLocationAsync() {
+                    return Promise.resolve({
+                        longitude: 0,
+                        latitude: 0
+                    });
+                }
+
+            }
+        }
     }
 
 }
 
 dotNetInit((WebAtoms as any).Hybrid ??= {}, "WebAtoms.Hybrid", "WebAtoms.Hybrid");
+dotNetInit((WebAtoms as any).Hybrid.Api ??= {}, "WebAtoms.Hybrid.Api", "WebAtoms.Hybrid");
 dotNetInit((WebAtoms as any).Hybrid.Media ??= {}, "WebAtoms.Hybrid.Media", "WebAtoms.Hybrid.Media");
