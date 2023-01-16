@@ -61,6 +61,18 @@ export namespace WebAtoms {
                 }
 
             }
+
+            export class FileService extends RootObject {
+
+                public static createFile(name: string) {
+                    return name;
+                }
+
+                public static append(path: string, dataUri: string) {
+                    return Promise.resolve(0);
+                }
+
+            }
         }
     }
 
